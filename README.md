@@ -39,11 +39,11 @@ El comando `bsdunzip` también debe estar disponible. Podría estar incluido en 
 
 ### Instalar el Runtime y SDK de Freedesktop
 
-Esta aplicación utiliza el runtime Freedesktop 25.08. Añade el repositorio de Flathub e instala el runtime y SDK requeridos con los siguientes comandos:
+Añade el repositorio de Flathub e instala el runtime y SDK requeridos con los siguientes comandos:
 
 ```bash
 flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install --user flathub org.freedesktop.Platform//25.08 org.freedesktop.Sdk//25.08 org.freedesktop.Sdk.Extension.openjdk21//25.08
+flatpak install --user flathub org.freedesktop.Platform//24.08 org.freedesktop.Sdk//24.08 org.freedesktop.Sdk.Extension.openjdk11//24.08
 ```
 
 

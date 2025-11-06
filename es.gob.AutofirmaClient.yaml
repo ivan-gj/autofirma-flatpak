@@ -1,9 +1,9 @@
 app-id: es.gob.AutofirmaClient
 runtime: org.freedesktop.Platform
-runtime-version: "25.08"
+runtime-version: "24.08"
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.openjdk21
+  - org.freedesktop.Sdk.Extension.openjdk17
 command: autofirma
 
 finish-args:
@@ -26,7 +26,7 @@ modules:
   - name: openjdk
     buildsystem: simple
     build-commands:
-      - /usr/lib/sdk/openjdk21/install.sh
+      - /usr/lib/sdk/openjdk17/install.sh
 
   - name: autofirma
     buildsystem: simple

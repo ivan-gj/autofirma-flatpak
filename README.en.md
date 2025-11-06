@@ -39,11 +39,11 @@ The command `bsdunzip` must also be available. It might be provided by `libarchi
 
 ### Install the Freedesktop Runtime and SDK
 
-This application uses the Freedesktop 25.08 runtime. Add the Flathub repository and install the required runtime and SDK with the following commands:
+Add the Flathub repository and install the required runtime and SDK with the following commands:
 
 ```bash
 flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install --user flathub org.freedesktop.Platform//25.08 org.freedesktop.Sdk//25.08 org.freedesktop.Sdk.Extension.openjdk21//25.08
+flatpak install --user flathub org.freedesktop.Platform//24.08 org.freedesktop.Sdk//24.08 org.freedesktop.Sdk.Extension.openjdk11//24.08
 ```
 
 
