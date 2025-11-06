@@ -47,7 +47,7 @@ Una vez cumplidos los prerrequisitos, puedes construir e instalar el Flatpak loc
 
 **Clona este repositorio:**
 ```bash
-git clone https://github.com/ivangj/autofirma-flatpak.git
+git clone https://github.com/ivan-gj/autofirma-flatpak.git
 cd autofirma-flatpak
 ```
 
@@ -66,7 +66,7 @@ flatpak run es.gob.AutofirmaClient
 
 - [**Sitio web oficial de Autofirma**][official-website]
 - [**Repositorio oficial del Cliente AutoFirma**][official-repo]
-- [**Intento de construcción no oficial**][aruiz-repo]
+- [**Intento de construcción no oficial por aruiz**][aruiz-repo]
 - [**Documentación de Flatpak**][flatpak-docs]
 - [**Flathub**][flathub]
 

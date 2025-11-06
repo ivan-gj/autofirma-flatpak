@@ -47,7 +47,7 @@ Once the prerequisites are met, you can build and install the Flatpak locally.
 
 **Clone this repository:**
 ```bash
-git clone https://github.com/ivangj/autofirma-flatpak.git
+git clone https://github.com/ivan-gj/autofirma-flatpak.git
 cd autofirma-flatpak
 ```
 
@@ -66,7 +66,7 @@ flatpak run es.gob.AutofirmaClient
 
 - [**Official Autofirma website**][official-website]
 - [**Official AutoFirma Client Repository**][official-repo]
-- [**Unofficial Build Attempt**][aruiz-repo]
+- [**Unofficial Build Attempt by aruiz**][aruiz-repo]
 - [**Flatpak Documentation**][flatpak-docs]
 - [**Flathub**][flathub]
 
