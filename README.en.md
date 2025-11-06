@@ -24,7 +24,7 @@ This is an ongoing project. Head to the [issues][issues] and help out or submit 
 We also have a [Matrix chat][matrix-chat] for quick conversations. Help us bridge it to other platforms! 
 
 
-## Prerequisites
+## Local installation
 
 To build this Flatpak, you need to have `flatpak` and `flatpak-builder` installed on your system.
 
@@ -37,11 +37,11 @@ This application uses the Freedesktop 25.08 runtime. Add the Flathub repository 
 
 ```bash
 flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install --user flathub org.freedesktop.Platform//25.08 org.freedesktop.Sdk//25.08
+flatpak install --user flathub org.freedesktop.Platform//25.08 org.freedesktop.Sdk//25.08 org.freedesktop.Sdk.Extension.openjdk21//25.08
 ```
 
 
-## Local Installation
+## Building the flatpak container
 
 Once the prerequisites are met, you can build and install the Flatpak locally.
 
