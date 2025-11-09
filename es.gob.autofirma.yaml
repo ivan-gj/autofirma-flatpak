@@ -55,10 +55,6 @@ modules:
       - sed -i 's|^Exec=.*|Exec=autofirma %u|g' /app/share/applications/${FLATPAK_ID}.desktop
       - sed -i "s|^Icon=.*|Icon=${FLATPAK_ID}|g" /app/share/applications/${FLATPAK_ID}.desktop
 
-      # Install Firefox configuration (merged module)
-      - install -d /app/etc/firefox/pref
-      - install -c etc/firefox/pref/Autofirma.js /app/etc/firefox/pref/
-
       # Install licenses and documentation
       - install -d /app/share/doc/${FLATPAK_ID}
       - cp -r usr/share/doc/Autofirma/* /app/share/doc/${FLATPAK_ID}/
