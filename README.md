@@ -14,9 +14,8 @@ Flatpak no oficial de Autofirma, la aplicación de firma electrónica del Gobier
 ✅ **Compatible con:**
 - Firma local de documentos
 - Firefox nativo y [Flathub][firefox-flathub] (Flatpak)
-
-❌ **No verificado:**
-- DNIe (probablemente no funcione)
+- DNIe
+- Otros módulos criptograficos PKCS#11 soportados por OpenSC (p. ej.: YubiKey) - Seguir el mismo procedimiento que para la integración con DNIe.
 
 ## Instalación
 
@@ -32,6 +31,14 @@ git clone https://gitlab.com/ivangj/autofirma-flatpak.git
 cd autofirma-flatpak
 flatpak-builder --force-clean --user --install build-dir es.gob.autofirma.yaml
 ```
+
+## Integración con DNIe
+
+- Abrir la aplicación e ir a `Herramientas` > `Preferencias`. Seleccionar la pestaña `Almacenes de claves`.
+- En el apartado `Tarjetas inteligentes`, hacer click en `Agregar tarjeta`.
+- Introducir un nombre (p.ej.: `OpenSC`) en `Nombre de la tarjeta` y hacer click en `Examinar`.
+- Seleccionar la libreria `/app/lib/opensc-pkcs11.so`.
+- (Opcional) En `Almacén por defecto`, seleccionar la tarjeta recién creada para seleccionarla por defecto al firmar.
 
 
 ## Colaboración

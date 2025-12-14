@@ -14,9 +14,8 @@ Unofficial Flatpak of Autofirma, the Spanish Government's electronic signature a
 ✅ **Compatible with:**
 - Local document signing
 - Native Firefox and [Flathub's Firefox][firefox-flathub] (Flatpak)
-
-❌ **Not verified:**
-- DNIe (likely not working)
+- DNIe
+- Other PKCS#11 cryptographic modules supported by OpenSC (e. g.: YubiKey) - Follow the same procedure as for integrating with DNIe.
 
 ## Installation
 
@@ -33,6 +32,13 @@ cd autofirma-flatpak
 flatpak-builder --force-clean --user --install build-dir es.gob.autofirma.yaml
 flatpak run es.gob.autofirma
 ```
+
+## Integration with DNIe
+- Open the application and go to `Herramientas` > `Preferencias`. Select the tab: `Almacenes de claves`.
+- In section `Tarjetas inteligentes`, click on `Agregar tarjeta`.
+- Insert a name (e. g.: `OpenSC`) in `Nombre de la tarjeta` and click `Examinar`.
+- Select the library: `/app/lib/opensc-pkcs11.so`.
+- (Optional) In `Almacén por defecto`, select the recently created card to select it by default when signing.
 
 ## Collaboration
 

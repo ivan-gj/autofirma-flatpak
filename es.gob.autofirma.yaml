@@ -123,7 +123,26 @@ modules:
       - type: archive
         url: https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_112_2_RTM/src/nss-3.112.2.tar.gz
         sha256: 2019b8bd0bedeeae395fc360811af0eb51a19d047843059ec07ea435b90271d5
+  
+  - name: pcsc-libs-lite
+    buildsystem: meson
+    config-opts:
+      - -Dlibsystemd=false
+      - -Dpolkit=false
+    sources:
+      - type: archive
+        url: "https://pcsclite.apdu.fr/files/pcsc-lite-2.4.0.tar.xz"
+        sha256: "22307017a99e123dbecb991136783beca07966f1376d74d9ad0004ba5f81c4f1"
 
+  - name: opensc
+    buildsystem: autotools
+    build-options:
+      cflags: -Wno-error=unterminated-string-initialization
+      cxxflags: -Wno-error=unterminated-string-initialization
+    sources:
+      - type: archive
+        url: "https://github.com/OpenSC/OpenSC/releases/download/0.26.1/opensc-0.26.1.tar.gz"
+        sha256: "f16291a031d86e570394762e9f35eaf2fcbc2337a49910f3feae42d54e1688cb"
 
   # Module for application store metadata (AppStream)
   - name: metainfo
