@@ -81,6 +81,7 @@ modules:
         paths:
           - patches/fix-dep-version.patch
           - patches/fix-exec-paths.patch
+          - patches/fix-desktop-warnings.patch
       - maven_dependencies.yaml
 
 
