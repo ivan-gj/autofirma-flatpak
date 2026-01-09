@@ -26,47 +26,62 @@ modules:
 
   - name: autofirma
     buildsystem: simple
+    build-options:
+      # Allow network access during build to get maven dependencies
+      # build-args:
+      #   - --share=network
+      env:
+        PATH: ${PATH}:/app/bin:/usr/bin:/usr/lib/sdk/openjdk17/bin
+        MAVEN_OPTS: -Dmaven.test.skip=true -Dmaven.repo.local=.m2/repository
+        JAVA_HOME: /usr/lib/sdk/openjdk17/jvm/openjdk-17
+        DEB_USR: afirma-simple-installer/linux/instalador_deb/src/usr
     build-commands:
-      # Extract the .deb
-      - ar x autofirma_1_9.deb
-      - tar xf data.tar.gz
+      # Do not use ranged versions on bouncycastle deps. Fixes offline build
+      - sed -i -E 's|<version>\[([0-9]+\.[0-9]+).*?\)</version>|<version>\1</version>|g' .m2/repository/org/bouncycastle/bc*-jdk18on/*/bc*-jdk18on-*.pom
+      # Offline maven build (-o)
+      - mvn clean install -o -B -Denv=install
 
       # Install main application files
       - install -d /app/lib
-      - cp -r usr/lib/Autofirma/* /app/lib/
+      - install -c -m 0755 afirma-simple/target/autofirma.jar /app/lib/
 
       # Install the original launcher script as autofirma.real and patch paths
       - install -d /app/bin
-      - install -c usr/bin/autofirma /app/bin/autofirma.real
-      - sed -i 's|/usr/lib/Autofirma|/app/lib|g' /app/bin/autofirma.real
+      - install -c ${DEB_USR}/bin/autofirma /app/bin/autofirma.real
 
       # Install our new wrapper as the main 'autofirma' command
       - install -c -m 0755 autofirma.bash /app/bin/autofirma
 
       # Install icons following the freedesktop standard
-      - install -d /app/share/icons/hicolor/64x64/apps
-      - install -c usr/lib/Autofirma/Autofirma.png /app/share/icons/hicolor/64x64/apps/${FLATPAK_ID}.png
+      - install -d /app/share/icons/hicolor/128x128/apps
+      - install -c ${DEB_USR}/lib/AutoFirma/AutoFirma.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
 
       # Install .desktop file following the freedesktop standard
       - install -d /app/share/applications
-      - install -c usr/share/applications/afirma.desktop /app/share/applications/${FLATPAK_ID}.desktop
-      # Patch the .desktop to use the correct command and icon
-      - sed -i 's|^Exec=.*|Exec=autofirma %u|g' /app/share/applications/${FLATPAK_ID}.desktop
-      - sed -i "s|^Icon=.*|Icon=${FLATPAK_ID}|g" /app/share/applications/${FLATPAK_ID}.desktop
+      - install -c ${DEB_USR}/share/applications/afirma.desktop /app/share/applications/${FLATPAK_ID}.desktop
 
       # Install licenses and documentation
       - install -d /app/share/doc/${FLATPAK_ID}
-      - cp -r usr/share/doc/Autofirma/* /app/share/doc/${FLATPAK_ID}/
+      - cp -r ${DEB_USR}/share/doc/AutoFirma/* /app/share/doc/${FLATPAK_ID}/
       - install -d /app/share/licenses/${FLATPAK_ID}
-      - cp -r usr/share/common-licenses/* /app/share/licenses/${FLATPAK_ID}/
+      - cp -r ${DEB_USR}/share/common-licenses/* /app/share/licenses/${FLATPAK_ID}
 
     sources:
+      # It's possible to use the git repo as a source instead of the .tar
+      # - type: git
+      #   url: https://github.com/ctt-gob-es/clienteafirma.git
+      #   tag: v1.9
+      #   commit: 1f29aa7a2aae8eda40a70fed79b0428153c78df8
       - type: archive
-        url: https://firmaelectronica.gob.es/content/dam/firmaelectronica/descargas-software/autofirma19/Autofirma_Linux_Debian.zip
-        sha256: "c29c251f2ee9f00dfc87f9582677dbd436a83565986ab0417ff065ceae716798"
-        strip-components: 0
+        url: https://github.com/ctt-gob-es/clienteafirma/archive/refs/tags/v1.9.tar.gz
+        sha256: 639c14bae0c41955e74714d2eba9727eb8e1828c6ca548686195a6ac9c898f09
       - type: file
         path: autofirma.bash
+      - type: patch
+        paths:
+          - patches/fix-dep-version.patch
+          - patches/fix-exec-paths.patch
+      - maven_dependencies.yaml
 
 
   # 2. nspr (Netscape Portable Runtime, required by NSS)
