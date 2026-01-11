@@ -55,6 +55,6 @@ Help us improve! The goal is to publish on Flathub.
 [flatpak-docs]: https://docs.flatpak.org/
 [issues]: https://gitlab.com/ivangj/autofirma-flatpak/-/issues
 [matrix-chat]: https://matrix.to/#/#autofirma-flatpak:matrix.org
-[official-repo]: https://github.com/ctt-gob-es/cliente-firma-desktop
+[official-repo]: https://github.com/ctt-gob-es/clienteafirma
 [official-website]: https://firmaelectronica.gob.es/
 [self-repo]: https://gitlab.com/ivangj/autofirma-flatpak
