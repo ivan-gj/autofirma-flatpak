@@ -19,6 +19,19 @@
         <color type="primary" scheme_preference="light">#ffffff</color>
         <color type="primary" scheme_preference="dark">#deddda</color>
     </branding>
+    <screenshots>
+        <screenshot type="default">
+            <image>https://gitlab.com/ivangj/autofirma-flatpak/-/raw/d63de081d312bf7fc20211e116552a180f8cbcc1/assets/screenshots/settings.webp</image>
+            <image>https://gitlab.com/ivangj/autofirma-flatpak/-/raw/d63de081d312bf7fc20211e116552a180f8cbcc1/assets/screenshots/welcome.webp</image>
+            <caption>Main window when launching the app</caption>
+            <caption xml:lang="es">Ventana principal al iniciar la aplicación</caption>
+        </screenshot>
+        <screenshot>
+            <image>https://gitlab.com/ivangj/autofirma-flatpak/-/raw/d63de081d312bf7fc20211e116552a180f8cbcc1/assets/screenshots/settings.webp</image>
+            <caption>Settings of the main aplication</caption>
+            <caption xml:lang="es">Preferencias de configuración de firma electrónica</caption>
+        </screenshot>
+    </screenshots>
     <content_rating type="oars-1.1"/>
     <releases>
         <release version="1.9" date="2025-07-28"/>
