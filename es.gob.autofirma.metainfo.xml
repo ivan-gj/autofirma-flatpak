@@ -3,12 +3,14 @@
     <id>es.gob.autofirma</id>
     <name>AutoFirma</name>
     <summary>Aplicación de firma electrónica del Gobierno de España</summary>
-    <metadata_license>CC0-1.0</metadata_license>
-    <project_license>EUPL-1.1 AND GPL-2.0-or-later</project_license>
     <description>
         <p>**This is a community package of AutoFirma and not officially supported by Gobierno de España.**</p>
+        <p>**This app is only available in Spanish.**</p>
         <p>Autofirma proporciona una interfaz gráfica para la firma electrónica de documentos y puede ser ejecutada desde el navegador para la firma de procedimientos administrativos web de Administración Electrónica</p>
     </description>
+    <developer id="es.gob.ctt">
+        <name>Gobierno de España</name>
+    </developer>
     <launchable type="desktop-id">es.gob.autofirma.desktop</launchable>
     <url type="homepage">https://firmaelectronica.gob.es</url>
     <url type="bugtracker">https://github.com/ctt-gob-es/clienteafirma/issues</url>
@@ -16,4 +18,6 @@
     <releases>
         <release version="1.9" date="2025-07-28"/>
     </releases>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>EUPL-1.1 AND GPL-2.0-or-later</project_license>
 </component>
