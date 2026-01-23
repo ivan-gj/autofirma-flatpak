@@ -56,6 +56,9 @@ modules:
       # Install icons following the freedesktop standard
       - install -d /app/share/icons/hicolor/128x128/apps
       - install -c ${DEB_USR}/lib/AutoFirma/AutoFirma.png /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.png
+      # Install SVG icon (scalable)
+      - install -d /app/share/icons/hicolor/scalable/apps
+      - install -c afirma-simple-installer/linux/instalador_deb/src/usr/share/AutoFirma/AutoFirma.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
 
       # Install .desktop file following the freedesktop standard
       - install -d /app/share/applications
@@ -83,6 +86,7 @@ modules:
           - patches/fix-dep-version.patch
           - patches/fix-exec-paths.patch
           - patches/fix-desktop-warnings.patch
+          - patches/fix-svg-icon-width.patch
       - maven_dependencies.yaml
 
   # 2. nspr (Netscape Portable Runtime, required by NSS)
