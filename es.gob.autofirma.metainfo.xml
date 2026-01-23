@@ -2,6 +2,7 @@
 <component type="desktop-application">
     <id>es.gob.autofirma</id>
     <name>AutoFirma</name>
+    <name>Autofirma</name>
     <summary>Aplicación de firma electrónica del Gobierno de España</summary>
     <description>
         <p>**This is a community package of AutoFirma and not officially supported by Gobierno de España.**</p>
