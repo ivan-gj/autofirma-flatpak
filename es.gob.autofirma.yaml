@@ -11,6 +11,7 @@ finish-args:
   - --filesystem=~/.var/app/org.mozilla.firefox/.mozilla/firefox:rw
   - --socket=wayland
   - --socket=x11
+  - --share=ipc
   - --share=network
   - --socket=pcsc  # smart card support
 
@@ -84,7 +85,6 @@ modules:
           - patches/fix-desktop-warnings.patch
       - maven_dependencies.yaml
 
-
   # 2. nspr (Netscape Portable Runtime, required by NSS)
   - name: nspr
     buildsystem: autotools
@@ -129,17 +129,16 @@ modules:
         cp -Lr dist/public/nss/* /app/include/nss/
 
     cleanup:
-      - '/include'
-      - '/lib/pkgconfig'
+      - "/include"
+      - "/lib/pkgconfig"
       # remove the extra tools
-      - '/bin/modutil'
-      - '/bin/signtool'
+      - "/bin/modutil"
+      - "/bin/signtool"
 
     sources:
       - type: archive
         url: https://ftp.mozilla.org/pub/security/nss/releases/NSS_3_112_2_RTM/src/nss-3.112.2.tar.gz
         sha256: 2019b8bd0bedeeae395fc360811af0eb51a19d047843059ec07ea435b90271d5
-
 
   # Module for application store metadata (AppStream)
   - name: metainfo
