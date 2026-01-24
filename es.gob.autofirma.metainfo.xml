@@ -21,7 +21,6 @@
     </branding>
     <screenshots>
         <screenshot type="default">
-            <image>https://gitlab.com/ivangj/autofirma-flatpak/-/raw/d63de081d312bf7fc20211e116552a180f8cbcc1/assets/screenshots/settings.webp</image>
             <image>https://gitlab.com/ivangj/autofirma-flatpak/-/raw/d63de081d312bf7fc20211e116552a180f8cbcc1/assets/screenshots/welcome.webp</image>
             <caption>Main window when launching the app</caption>
             <caption xml:lang="es">Ventana principal al iniciar la aplicación</caption>
