@@ -22,6 +22,8 @@
     </developer>
     <launchable type="desktop-id">es.gob.afirma.desktop</launchable>
     <url type="homepage">https://firmaelectronica.gob.es</url>
+    <url type="bugtracker">https://gitlab.com/ivangj/autofirma-flatpak/-/issues</url>
+    <url type="vcs-browser">https://github.com/ctt-gob-es/clienteafirma</url>
     <branding>
         <color type="primary" scheme_preference="light">#ffffff</color>
         <color type="primary" scheme_preference="dark">#deddda</color>
