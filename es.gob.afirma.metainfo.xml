@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-    <id>es.gob.autofirma</id>
+    <id>es.gob.afirma</id>
     <name>Autofirma</name>
     <summary>Electronic signature application from the Spanish Government</summary>
     <summary xml:lang="es">Aplicación de firma electrónica del Gobierno de España</summary>
@@ -20,7 +20,7 @@
         <name>Spanish Government</name>
         <name xml:lang="es">Gobierno de España</name>
     </developer>
-    <launchable type="desktop-id">es.gob.autofirma.desktop</launchable>
+    <launchable type="desktop-id">es.gob.afirma.desktop</launchable>
     <url type="homepage">https://firmaelectronica.gob.es</url>
     <url type="bugtracker">https://github.com/ctt-gob-es/clienteafirma/issues</url>
     <branding>

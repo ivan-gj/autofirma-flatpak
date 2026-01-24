@@ -21,16 +21,21 @@ Flatpak no oficial de Autofirma, la aplicación de firma electrónica del Gobier
 ## Instalación
 
 **Prerrequisitos:**
-```bash
+```sh
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub org.freedesktop.Platform//25.08 org.freedesktop.Sdk//25.08 org.freedesktop.Sdk.Extension.openjdk17//25.08
 ```
 
 **Construir e instalar:**
-```bash
+```sh
 git clone https://gitlab.com/ivangj/autofirma-flatpak.git
 cd autofirma-flatpak
-flatpak-builder --force-clean --user --install build-dir es.gob.autofirma.yaml
+flatpak-builder --force-clean --user --install build-dir es.gob.afirma.yaml
+```
+
+Y luego la puedes lanzar desde la terminal con
+```sh
+flatpak run es.gob.afirma
 ```
 
 

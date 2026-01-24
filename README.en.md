@@ -21,17 +21,21 @@ Unofficial Flatpak of Autofirma, the Spanish Government's electronic signature a
 ## Installation
 
 **Prerequisites:**
-```bash
+```sh
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub org.freedesktop.Platform//25.08 org.freedesktop.Sdk//25.08 org.freedesktop.Sdk.Extension.openjdk17//25.08
 ```
 
 **Build and install:**
-```bash
+```sh
 git clone https://gitlab.com/ivangj/autofirma-flatpak.git
 cd autofirma-flatpak
-flatpak-builder --force-clean --user --install build-dir es.gob.autofirma.yaml
-flatpak run es.gob.autofirma
+flatpak-builder --force-clean --user --install build-dir es.gob.afirma.yaml
+```
+
+And finally you can launch it from the terminal like this: 
+```sh
+flatpak run es.gob.afirma
 ```
 
 ## Collaboration

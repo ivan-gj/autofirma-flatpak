@@ -13,4 +13,4 @@ index 18a6b3197..3bea4688e 100755
 -Exec=/usr/bin/autofirma %u
 -Icon=/usr/lib/Autofirma/Autofirma.png
 +Exec=autofirma %u
-+Icon=es.gob.autofirma
++Icon=es.gob.afirma
