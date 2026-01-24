@@ -48,6 +48,17 @@
         <category>Utility</category>
         <category>Java</category>
     </categories>
+    <keywords>
+        <keyword>signature</keyword>
+        <keyword xml:lang="es">firma</keyword>
+        <keyword>digital</keyword>
+        <keyword>security</keyword>
+        <keyword xml:lang="es">seguridad</keyword>
+        <keyword>certificate</keyword>
+        <keyword xml:lang="es">certificado</keyword>
+        <keyword>DNIe</keyword>
+        <keyword>authentication</keyword>
+    </keywords>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>EUPL-1.1 AND GPL-2.0-or-later</project_license>
     <provides>
