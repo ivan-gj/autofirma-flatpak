@@ -22,7 +22,6 @@
     </developer>
     <launchable type="desktop-id">es.gob.afirma.desktop</launchable>
     <url type="homepage">https://firmaelectronica.gob.es</url>
-    <url type="bugtracker">https://github.com/ctt-gob-es/clienteafirma/issues</url>
     <branding>
         <color type="primary" scheme_preference="light">#ffffff</color>
         <color type="primary" scheme_preference="dark">#deddda</color>
@@ -59,6 +58,11 @@
         <keyword>DNIe</keyword>
         <keyword>authentication</keyword>
     </keywords>
+    <!-- ONLY desktop supported -->
+    <requires>
+        <control>keyboard</control>
+        <control>pointing</control>
+    </requires>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>EUPL-1.1 AND GPL-2.0-or-later</project_license>
     <provides>
