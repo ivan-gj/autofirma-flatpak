@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
     <id>es.gob.autofirma</id>
-    <name>AutoFirma</name>
     <name>Autofirma</name>
-    <summary>Aplicación de firma electrónica del Gobierno de España</summary>
+    <summary>Electronic signature application from the Spanish Government</summary>
+    <summary xml:lang="es">Aplicación de firma electrónica del Gobierno de España</summary>
     <description>
-        <p>**This is a community package of AutoFirma and not officially supported by Gobierno de España.**</p>
-        <p>**This app is only available in Spanish.**</p>
-        <p>Autofirma proporciona una interfaz gráfica para la firma electrónica de documentos y puede ser ejecutada desde el navegador para la firma de procedimientos administrativos web de Administración Electrónica</p>
+        <p>**This is a community package of Autofirma and is not officially supported by the Spanish Government.**</p>
+        <p>**This app's user interface is only available in Spanish.**</p>
+        <p>AutoFirma provides a graphical interface for the electronic signature of documents. It can be launched from a web browser to sign administrative procedures on E-Government websites.</p>
+        <p>**Note**: DNIe reader support is currently untested and will likely not work. Work is being done to add this feature to the Flatpak package in future updates.</p>
+    </description>
+    <description xml:lang="es">
+        <p>**Este es un paquete comunitario de Autofirma y no cuenta con soporte oficial del Gobierno de España.**</p>
+        <p>**La interfaz de esta aplicación solo está disponible en español.**</p>
+        <p>Autofirma proporciona una interfaz gráfica para la firma electrónica de documentos y puede ser ejecutada desde el navegador para la firma de procedimientos administrativos web de Administración Electrónica.</p>
+        <p>**Nota**: El soporte para lectores de DNIe no ha sido probado y es muy probable que no funcione. Se está trabajando para añadir esta funcionalidad al paquete Flatpak en futuras versiones.</p>
     </description>
     <developer id="es.gob.ctt">
-        <name>Gobierno de España</name>
+        <name>Spanish Government</name>
+        <name xml:lang="es">Gobierno de España</name>
     </developer>
     <launchable type="desktop-id">es.gob.autofirma.desktop</launchable>
     <url type="homepage">https://firmaelectronica.gob.es</url>
