@@ -1,4 +1,4 @@
-# Autofirma Flatpak
+# Autofirma Flatpak (`es.gob.afirma`)
 
 [Read in English](README.en.md)
 
@@ -28,8 +28,8 @@ flatpak install flathub org.freedesktop.Platform//25.08 org.freedesktop.Sdk//25.
 
 **Construir e instalar:**
 ```sh
-git clone https://gitlab.com/ivangj/autofirma-flatpak.git
-cd autofirma-flatpak
+git clone https://github.com/flathub/es.gob.afirma.git
+cd es.gob.afirma
 flatpak-builder --force-clean --user --install build-dir es.gob.afirma.yaml
 ```
 
@@ -41,11 +41,10 @@ flatpak run es.gob.afirma
 
 ## Colaboración
 
-¡Ayúdanos a mejorar! El objetivo es publicar en Flathub.
+¡Ayúdanos a mejorar!
 
-- [**Reportar incidencias**][issues] (preferiblemente en GitLab)
+- [**Reportar incidencias**][issues]
 - [**Chat en Matrix**][matrix-chat]
-- [Repositorio principal en GitLab][self-repo] (GitHub es espejo)
 
 ## Referencias
 
@@ -57,8 +56,7 @@ flatpak run es.gob.afirma
 [aruiz-repo]: https://github.com/aruiz/autofirma-flatpak
 [firefox-flathub]: https://flathub.org/apps/org.mozilla.firefox
 [flatpak-docs]: https://docs.flatpak.org/
-[issues]: https://gitlab.com/ivangj/autofirma-flatpak/-/issues
+[issues]: https://github.com/flathub/es.gob.afirma/issues
 [matrix-chat]: https://matrix.to/#/#autofirma-flatpak:matrix.org
 [official-repo]: https://github.com/ctt-gob-es/clienteafirma
 [official-website]: https://firmaelectronica.gob.es/
-[self-repo]: https://gitlab.com/ivangj/autofirma-flatpak

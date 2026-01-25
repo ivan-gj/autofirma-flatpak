@@ -1,22 +1,22 @@
-# Autofirma Flatpak
+# AutoFirma Flatpak (`es.gob.afirma`)
 
-[Leer en Español](README.md)
+[Leer en español](README.md)
 
 ---
 
-Unofficial Flatpak of Autofirma, the Spanish Government's electronic signature application.
+Unofficial Flatpak for AutoFirma, the digital signature application provided by the Government of Spain.
 
 > [!WARNING]
-> **Unofficial community package** - Not supported by the Spanish Government.
+> **Unofficial community package** - This is not supported by the Spanish Government.
 
-## Current Status
+## Current status
 
 ✅ **Compatible with:**
 - Local document signing
-- Native Firefox and [Flathub's Firefox][firefox-flathub] (Flatpak)
+- Native Firefox and [Flathub][firefox-flathub] (Flatpak)
 
-❌ **Not verified:**
-- DNIe (likely not working)
+❌ **Unverified:**
+- DNIe (Spanish Electronic ID) — likely non-functional
 
 ## Installation
 
@@ -24,41 +24,44 @@ Unofficial Flatpak of Autofirma, the Spanish Government's electronic signature a
 ```sh
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub org.freedesktop.Platform//25.08 org.freedesktop.Sdk//25.08 org.freedesktop.Sdk.Extension.openjdk17//25.08
+
 ```
 
 **Build and install:**
+
 ```sh
-git clone https://gitlab.com/ivangj/autofirma-flatpak.git
-cd autofirma-flatpak
+git clone https://github.com/flathub/es.gob.afirma.git
+cd es.gob.afirma
 flatpak-builder --force-clean --user --install build-dir es.gob.afirma.yaml
+
 ```
 
-And finally you can launch it from the terminal like this: 
+You can then launch it from the terminal using:
+
 ```sh
 flatpak run es.gob.afirma
+
 ```
 
-## Collaboration
+## Contributing
 
-Help us improve! The goal is to publish on Flathub.
+Help us improve!
 
-- [**Report issues**][issues] (preferably on GitLab)
-- [**Matrix chat**][matrix-chat]
-- [Primary repository on GitLab][self-repo] (GitHub is a mirror)
+* [**Report issues**][issues]
+* [**Matrix chat**][matrix-chat]
 
 ## References
 
-- [Official AutoFirma website][official-website]
-- [Official repository][official-repo]
-- [Flatpak documentation][flatpak-docs]
-- [**Unofficial build attempt by aruiz**][aruiz-repo]
+* [Official AutoFirma website][official-website]
+* [Official repository][official-repo]
+* [Flatpak documentation][flatpak-docs]
+* [**Unofficial build attempt by aruiz**][aruiz-repo]
 
 
 [aruiz-repo]: https://github.com/aruiz/autofirma-flatpak
 [firefox-flathub]: https://flathub.org/apps/org.mozilla.firefox
 [flatpak-docs]: https://docs.flatpak.org/
-[issues]: https://gitlab.com/ivangj/autofirma-flatpak/-/issues
+[issues]: https://github.com/flathub/es.gob.afirma/issues
 [matrix-chat]: https://matrix.to/#/#autofirma-flatpak:matrix.org
 [official-repo]: https://github.com/ctt-gob-es/clienteafirma
 [official-website]: https://firmaelectronica.gob.es/
-[self-repo]: https://gitlab.com/ivangj/autofirma-flatpak
